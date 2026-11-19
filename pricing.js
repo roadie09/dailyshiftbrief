@@ -65,7 +65,7 @@ function withClientReference(url, ref) {
 }
 
 function invoiceMailto(version, when, name, company, title, workEmail, secondEmail) {
-  var subject = "SiteSession invoice request " + version;
+  var subject = "Daily Shift Brief invoice request " + version;
   var body = [
     "Agreement version: " + version,
     "User name: " + (name || ""),
