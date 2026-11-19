@@ -1,6 +1,6 @@
-# SiteSession
+# Daily Shift Brief
 
-Marketing site for SiteSession (dailyshiftbrief.com), a daily 10 to 15 minute pre-shift briefing for manufacturing plants. It covers more than safety. Plain HTML and CSS. No build step. No backend.
+Marketing site for Daily Shift Brief (dailyshiftbrief.com), a daily 10 to 15 minute pre-shift briefing for manufacturing plants. It covers more than safety. Plain HTML and CSS. No build step. No backend.
 
 ## Run it locally
 
