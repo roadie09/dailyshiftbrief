@@ -81,7 +81,7 @@ function invoiceMailto(version, when, name, company, title, workEmail, secondEma
     "Site count:",
     ""
   ].join("\n");
-  return "mailto:robertsenicolaas@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  return "mailto:hello@dailyshiftbrief.net?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
 }
 
 var monthlyUrl = typeof STRIPE_MONTHLY_URL === "string" ? STRIPE_MONTHLY_URL : "";
