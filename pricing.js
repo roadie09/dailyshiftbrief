@@ -89,7 +89,7 @@ var annualUrl = typeof STRIPE_ANNUAL_URL === "string" ? STRIPE_ANNUAL_URL : "";
 var checkoutOpen = typeof CHECKOUT_OPEN === "boolean" ? CHECKOUT_OPEN : false;
 
 if (checkoutOpen) {
-  wireStripeButton("subscribe-monthly", monthlyUrl, "Subscribe monthly");
+  wireStripeButton("subscribe-monthly", monthlyUrl, "Subscribe - $90/month");
   wireStripeButton("subscribe-annual", annualUrl, "Subscribe annually");
 }
 

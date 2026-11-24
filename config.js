@@ -2,7 +2,7 @@
 // Set each value to a full https://buy.stripe.com/... URL when the account exists.
 // Leave the empty string, or any placeholder, until then.
 // pricing.js treats empty and placeholder values as not ready.
-var STRIPE_MONTHLY_URL = "";
+var STRIPE_MONTHLY_URL = "https://buy.stripe.com/eVq8wIfbBaaVaqGclF9fW00";
 var STRIPE_ANNUAL_URL = "";
 
 // Checkout and invoicing stay closed until the LLC is formed and an attorney
@@ -24,11 +24,12 @@ if (typeof document !== "undefined") {
     fillBusinessAddress();
   }
 }
+// Checkout opened Nov 24, 2026 on Nicolaas's word.
 // Nicolaas will turn on Stripe's own terms checkbox in the Dashboard later
 // (consent_collection.terms_of_service = required) and point Stripe's terms URL
 // at https://dailyshiftbrief.com/customer-agreement.html.
 // This static site cannot record that Stripe consent.
-var CHECKOUT_OPEN = false;
+var CHECKOUT_OPEN = true;
 
 // Shown on the customer agreement and sent with an invoice request or card checkout.
 // The agreement page also has this text in the HTML so it shows with JavaScript off.
