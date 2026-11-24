@@ -1,4 +1,4 @@
-// Reads STRIPE_MONTHLY_URL and STRIPE_ANNUAL_URL from config.js.
+// Reads STRIPE_MONTHLY_URL from config.js.
 // Empty or placeholder values leave the HTML links alone (contact.html).
 
 function isLiveStripeUrl(value) {
@@ -78,19 +78,17 @@ function invoiceMailto(version, when, name, company, title, workEmail, secondEma
     "Accepted at: " + when,
     "",
     "A signed order form will follow. Please send the agreement PDF to both email addresses by hand.",
-    "Site count:",
+    "Number of computers:",
     ""
   ].join("\n");
   return "mailto:hello@dailyshiftbrief.net?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
 }
 
 var monthlyUrl = typeof STRIPE_MONTHLY_URL === "string" ? STRIPE_MONTHLY_URL : "";
-var annualUrl = typeof STRIPE_ANNUAL_URL === "string" ? STRIPE_ANNUAL_URL : "";
 var checkoutOpen = typeof CHECKOUT_OPEN === "boolean" ? CHECKOUT_OPEN : false;
 
 if (checkoutOpen) {
   wireStripeButton("subscribe-monthly", monthlyUrl, "Subscribe - $90/month");
-  wireStripeButton("subscribe-annual", annualUrl, "Subscribe annually");
 }
 
 function bindAgreement() {
@@ -98,7 +96,7 @@ function bindAgreement() {
   var termsBox = document.getElementById("agree-terms");
   var releaseBox = document.getElementById("agree-release");
   if (!termsBox || !releaseBox) return;
-  var ids = ["subscribe-monthly", "subscribe-annual", "request-invoice"];
+  var ids = ["subscribe-monthly", "request-invoice"];
   var version = (typeof AGREEMENT_VERSION === "string" && AGREEMENT_VERSION.trim())
     ? AGREEMENT_VERSION.trim()
     : "Version 0.1 draft, Nov 13, 2026";
@@ -196,7 +194,7 @@ function bindAgreement() {
     });
   }
 
-  ["subscribe-monthly", "subscribe-annual"].forEach(function (id) {
+  ["subscribe-monthly"].forEach(function (id) {
     var link = document.getElementById(id);
     if (!link) return;
     link.addEventListener("click", function (event) {

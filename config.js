@@ -3,10 +3,8 @@
 // Leave the empty string, or any placeholder, until then.
 // pricing.js treats empty and placeholder values as not ready.
 var STRIPE_MONTHLY_URL = "https://buy.stripe.com/eVq8wIfbBaaVaqGclF9fW00";
-var STRIPE_ANNUAL_URL = "";
 
-// Checkout and invoicing stay closed until the LLC is formed and an attorney
-// fills in the legal name, insurance limits, and retention period.
+// Card checkout is open. Invoices are net-30, paid by bank transfer (ACH).
 // The mailing address and Cullman County venue are set. The house number
 // lives only on the next line.
 var BUSINESS_ADDRESS = "4166 County Road 1564, Baileyton, AL 35019";
@@ -27,7 +25,7 @@ if (typeof document !== "undefined") {
 // Checkout opened Nov 24, 2026 on Nicolaas's word.
 // Nicolaas will turn on Stripe's own terms checkbox in the Dashboard later
 // (consent_collection.terms_of_service = required) and point Stripe's terms URL
-// at https://dailyshiftbrief.com/customer-agreement.html.
+// at https://dailyshiftbrief.net/customer-agreement.html.
 // This static site cannot record that Stripe consent.
 var CHECKOUT_OPEN = true;
 
